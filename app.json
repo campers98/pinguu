@@ -1,0 +1,31 @@
+{
+  "name": "ʀᴀɴɪ ᴄʜᴀᴛʙᴏᴛ",
+  "description": "A Telegram Chat Bot Based On ptb",
+  "keywords": [
+    "telegram",
+    "open",
+    "source",
+    "multi",
+    "Nibi",
+    "anie",
+    "Chatbot",
+    "ai-chatbot"
+  ],
+  "env": {
+     "MONGO_DB_URL": {
+        "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs. cloud.mongodb.com",
+        "required": false,
+        "value": ""
+     },
+    "TOKEN": {
+      "description": "ʙᴏᴛ ᴛᴏᴋᴇɴ ғʀᴏᴍ @botfather..",
+      "value": "BOT_TOKEN"
+    } 
+  },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          }
+      ],
+      "stack": "container"
+  }
