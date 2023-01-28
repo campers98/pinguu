@@ -103,7 +103,7 @@ async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
                    chatbotai.insert_one({"chat":chat.id, "word": message.reply_to_message.text, "text": message.text, "check": "none"})
 
 
-START = CommandHandler(["start", "ping"], start, block=False)
+START = CommandHandler(["chatbot", "ping"], start, block=False)
 
 
 USER_HANDLER = MessageHandler(
