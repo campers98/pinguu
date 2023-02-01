@@ -17,29 +17,10 @@ from typing import Union, List, Dict, Callable, Generator, Any
 import itertools
 from collections.abc import Iterable
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
-
 from telegram import Chat, ChatMember, Update, User
 from functools import wraps
-from config import MONGO_DB_URL, TOKEN
-
-TOKEN = TOKEN
-MONGO_DB_URL = MONGO_DB_URL
-
-AI_API_KEY = "RBPOWF2m8z85prBQ"
-AI_BID = "171092"
+from chatbot import *
 USERS_GROUP = 11
-
-application = Application.builder().token(TOKEN).build()
-asyncio.get_event_loop().run_until_complete(application.bot.initialize())
-BOT_ID = application.bot.id
-
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat = update.effective_chat
-    msg = update.effective_message
-    keyb = []
-    keyb.append([InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"http://t.me/{context.bot.username}?startgroup=true")])
-    await msg.reply_text(f"ʜᴇʏᴀ\nɪ'ᴍ {context.bot.first_name}\nɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ᴀᴄᴛɪᴠᴇ ʏᴏᴜʀ ᴄʜᴀᴛ", reply_markup=InlineKeyboardMarkup(keyb))
-
 
 async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
    chat = update.effective_chat
@@ -103,14 +84,7 @@ async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
                    chatbotai.insert_one({"chat":chat.id, "word": message.reply_to_message.text, "text": message.text, "check": "none"})
 
 
-START = CommandHandler(["chatbot", "ping"], start, block=False)
-
-
 USER_HANDLER = MessageHandler(
     Filters.ALL, log_user, block=False
 )
-application.add_handler(USER_HANDLER, USERS_GROUP)
-application.add_handler(START)
-
-print("ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ")
-application.run_polling()
+rani.add_handler(USER_HANDLER, USERS_GROUP)
