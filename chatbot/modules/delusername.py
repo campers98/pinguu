@@ -11,7 +11,7 @@ async def stop_chat_username(update: Update, context: ContextTypes.DEFAULT_TYPE)
     chat = update.effective_chat
     message = update.effective_message
     users = update.effective_user
-    links = re.findall(r"@[^\s]+", message.text)
+    links = await re.findall(r"@[^\s]+", message.text)
     if not links:
         return
     chat_admins = await rani.bot.getChatAdministrators(chat.id)
