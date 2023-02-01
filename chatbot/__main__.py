@@ -1,12 +1,12 @@
 import logging
-
+import importlib
 from chatbot.modules import ALL_MODULES
 
 
 def main():
     rani.run_polling(
         timeout=15,
-        drop_pending_updates=True,
+        drop_pending_updates=False,
         allowed_updates=Update.ALL_TYPES,
         stop_signals=None,
     )
@@ -27,4 +27,4 @@ if __name__ == "__main__":
     for module in ALL_MODULES:
         importlib.import_module("chatbot.modules." + module)
     main()
-    print("I AM NOW ONLINE")
+    print("ɪ ᴀᴍ ɴᴏᴡ ᴏɴʟɪɴᴇ")
