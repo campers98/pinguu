@@ -8,6 +8,7 @@ import asyncio
 
 from telegram import Update
 from telegram.ext import Application
+
 from config import MONGO_DB_URL, TOKEN
 
 TOKEN = TOKEN
