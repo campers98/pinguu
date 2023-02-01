@@ -1,6 +1,6 @@
 import logging
-from chatbot.modules import ALL_MODULES
 
+from chatbot.modules import ALL_MODULES
 
 
 def main():
@@ -10,7 +10,8 @@ def main():
         allowed_updates=Update.ALL_TYPES,
         stop_signals=None,
     )
-    
+
+
 if __name__ == "__main__":
     logging.basicConfig(
         handlers=[logging.FileHandler("logs.txt"), logging.StreamHandler()],
@@ -18,10 +19,10 @@ if __name__ == "__main__":
         format=FORMAT,
         datefmt="[%X]",
     )
-    logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(logging.INFO)
+    logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(
+        logging.INFO
+    )
     for module in ALL_MODULES:
-      importlib.import_module("chatbot.modules." + module)
+        importlib.import_module("chatbot.modules." + module)
     main()
-    print("I AM NOW ONLINE") 
-
-
+    print("I AM NOW ONLINE")
