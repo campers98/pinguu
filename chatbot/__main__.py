@@ -10,7 +10,7 @@ from chatbot.modules import ALL_MODULES
 def main():
     rani.run_polling(
         timeout=15,
-        drop_pending_updates=False,
+        drop_pending_updates=True,
         allowed_updates=Update.ALL_TYPES,
         stop_signals=None,
     )
