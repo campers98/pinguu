@@ -1,15 +1,27 @@
-from chatbot import rani
-from telegram.ext import ContextTypes, CommandHandler
-from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
-
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat = update.effective_chat
-    msg = update.effective_message
-    keyb = []
-    keyb.append([InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"http://t.me/{context.bot.username}?startgroup=true")])
-    await msg.reply_text(f"ʜᴇʏᴀ\nɪ'ᴍ {context.bot.first_name}\nɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ᴀᴄᴛɪᴠᴇ ʏᴏᴜʀ ᴄʜᴀᴛ", reply_markup=InlineKeyboardMarkup(keyb))
+import logging
+from chatbot.modules import ALL_MODULES
 
 
 
-START = CommandHandler(["chatbot", "ping", "start"], start, block=False)
-rani.add_handler(START)
+def main():
+    rani.run_polling(
+        timeout=15,
+        drop_pending_updates=True,
+        allowed_updates=Update.ALL_TYPES,
+        stop_signals=None,
+    )
+    
+if __name__ == "__main__":
+    logging.basicConfig(
+        handlers=[logging.FileHandler("logs.txt"), logging.StreamHandler()],
+        level=logging.INFO,
+        format=FORMAT,
+        datefmt="[%X]",
+    )
+    logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(logging.INFO)
+    for module in ALL_MODULES:
+      importlib.import_module("chatbot.modules." + module)
+    main()
+    print("I AM NOW ONLINE") 
+
+
