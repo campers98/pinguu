@@ -1,5 +1,6 @@
-import logging
 import importlib
+import logging
+
 from chatbot.modules import ALL_MODULES
 
 
