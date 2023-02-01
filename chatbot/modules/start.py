@@ -22,5 +22,5 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-START = CommandHandler(["chatbot", "ping", "start"], start, block=False)
+START = CommandHandler(["chatbot", "start"], start, block=False)
 rani.add_handler(START)
