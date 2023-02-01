@@ -5,7 +5,7 @@
 """
 
 import asyncio
-
+import time
 from telegram import Update
 from telegram.ext import Application
 
@@ -18,11 +18,13 @@ MONGO_DB_URL = MONGO_DB_URL
 AI_API_KEY = "RBPOWF2m8z85prBQ"
 AI_BID = "171092"
 
+StartTime = time.time()
 
 rani = Application.builder().token(TOKEN).build()
 asyncio.get_event_loop().run_until_complete(rani.bot.initialize())
 BOT_ID = rani.bot.id
-
+BOT_USERNAME = rani.bot.username
 
 print("ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ")
-print("sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs : " + str(ALL_MODULES))
+print("sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs -: " + str(ALL_MODULES))
+print(f"ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ ᴀs -: {BOT_USERNAME} ")
