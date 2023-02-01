@@ -8,7 +8,7 @@ import asyncio
 
 from telegram import Update
 from telegram.ext import Application
-
+from  chatbot.modules import ALL_MODULES
 from config import MONGO_DB_URL, TOKEN
 
 TOKEN = TOKEN
@@ -24,5 +24,5 @@ BOT_ID = rani.bot.id
 
 
 print("ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ")
-
+print("sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs : " + str(ALL_MODULES))
 rani.run_polling()
