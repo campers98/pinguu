@@ -1,9 +1,13 @@
 import time
+
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.constants import ParseMode
-from telegram.ext import ContextTypes, CommandHandler
+from telegram.ext import CommandHandler, ContextTypes
+
 from chatbot import StartTime, rani
+
 from . import get_readable_time
+
 
 async def ping(update: Update, context: ContextTypes.DEFAULT_TYPE):
     msg = update.effective_message
@@ -23,7 +27,8 @@ async def ping(update: Update, context: ContextTypes.DEFAULT_TYPE):
             [
                 [
                     InlineKeyboardButton(
-                        text="sᴜᴘᴘᴏʀᴛ", url=f"http://t.me/Abishnoi_bots",
+                        text="sᴜᴘᴘᴏʀᴛ",
+                        url=f"http://t.me/Abishnoi_bots",
                     )
                 ]
             ]
@@ -33,4 +38,3 @@ async def ping(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 PING_HANDLER = CommandHandler("ping", ping, block=False)
 rani.add_handler(PING_HANDLER)
-
