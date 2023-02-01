@@ -2,7 +2,6 @@ LOAD = []
 NO_LOAD = []
 
 
-
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
@@ -35,10 +34,6 @@ async def convert_seconds_to_minutes(seconds: int):
     minutes = seconds // 60
     seconds %= 60
     return "%02d:%02d" % (minutes, seconds)
-
-
-
-
 
 
 def __list_all_modules():
