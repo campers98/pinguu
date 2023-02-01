@@ -25,4 +25,4 @@ BOT_ID = rani.bot.id
 
 print("ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ")
 
-application.run_polling()
+rani.run_polling()
