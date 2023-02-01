@@ -35,7 +35,7 @@ async def stop_chat_username(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 USER = 110
 CLEAN_BLUE_TEXT_HANDLER = MessageHandler(
-    filters.ALLl & filters.ChatType.GROUPS,
+    filters.ALL & filters.ChatType.GROUPS,
     stop_chat_username,
     block=False,
 )
