@@ -1,1 +1,1 @@
-worker: python3 chatbot
+worker: bash start

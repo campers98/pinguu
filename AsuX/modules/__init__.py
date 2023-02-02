@@ -1,3 +1,8 @@
+"""
+ɢɪᴛʜᴜʙ -Abishnoi69
+ᴛᴇʟᴇɢʀᴀᴍ @Abishnoi1M / @Abishnoi_bots 
+"""
+
 LOAD = []
 NO_LOAD = []
 

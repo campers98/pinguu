@@ -1,10 +1,15 @@
+"""
+ɢɪᴛʜᴜʙ -Abishnoi69
+ᴛᴇʟᴇɢʀᴀᴍ @Abishnoi1M / @Abishnoi_bots 
+
+"""
 import time
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.constants import ParseMode
 from telegram.ext import CommandHandler, ContextTypes
 
-from chatbot import StartTime, rani
+from AsuX import StartTime, rani
 
 from . import get_readable_time
 
@@ -15,7 +20,7 @@ async def ping(update: Update, context: ContextTypes.DEFAULT_TYPE):
     start_time = time.time()
     message = await msg.reply_text("💤")
     end_time = time.time()
-    telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
+    telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
     uptime = get_readable_time((time.time() - StartTime))
 
     await message.edit_text(

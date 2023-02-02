@@ -49,7 +49,7 @@ $ vi config.py
  Press I on the keyboard for editing config
 
  Press Ctrl+C when you're done with editing config and :wq to save the config
-$ python3 chatbot
+$ bash start
 ```
 
 ━━━━━━━━━━━━━━━━━━━━

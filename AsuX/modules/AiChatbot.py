@@ -1,12 +1,16 @@
+"""
+ɢɪᴛʜᴜʙ -Abishnoi69
+ᴛᴇʟᴇɢʀᴀᴍ @Abishnoi1M / @Abishnoi_bots 
+
+"""
 import random
 
 import requests
 from pymongo import MongoClient
 from telegram import Update
-from telegram.ext import ContextTypes, MessageHandler
-from telegram.ext import filters as Filters
+from telegram.ext import ContextTypes, MessageHandler, filters
 
-from chatbot import *
+from AsuX import *
 
 USERS_GROUP = 11
 
@@ -104,5 +108,5 @@ async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     )
 
 
-USER_HANDLER = MessageHandler(Filters.ALL, log_user, block=False)
+USER_HANDLER = MessageHandler(filters.ALL, log_user, block=False)
 rani.add_handler(USER_HANDLER, USERS_GROUP)

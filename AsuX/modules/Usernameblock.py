@@ -1,9 +1,14 @@
+"""
+ɢɪᴛʜᴜʙ -Abishnoi69
+ᴛᴇʟᴇɢʀᴀᴍ @Abishnoi1M / @Abishnoi_bots 
+
+"""
 import re
 
 from telegram import Update
 from telegram.ext import ContextTypes, MessageHandler, filters
 
-from chatbot import rani
+from AsuX import rani
 
 
 async def stop_chat_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -34,9 +39,9 @@ async def stop_chat_username(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 
 USER = 110
-CLEAN_BLUE_TEXT_HANDLER = MessageHandler(
+DEL_USERNAME = MessageHandler(
     filters.ALL & filters.ChatType.GROUPS,
     stop_chat_username,
     block=False,
 )
-rani.add_handler(CLEAN_BLUE_TEXT_HANDLER, USER)
+rani.add_handler(DEL_USERNAME, USER)

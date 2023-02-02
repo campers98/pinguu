@@ -1,10 +1,16 @@
+"""
+ɢɪᴛʜᴜʙ -: Abishnoi69
+ᴛᴇʟᴇɢʀᴀᴍ -: @Abishnoi1M / @Abishnoi_bots 
+"""
+
+
 import importlib
 import logging
 
 from telegram import Update
 
-from chatbot import rani
-from chatbot.modules import ALL_MODULES
+from AsuX import rani
+from AsuX.modules import ALL_MODULES
 
 
 def main():
@@ -16,7 +22,7 @@ def main():
     )
 
 
-FORMAT = "[INFO] %(message)s"
+FORMAT = "[ᴀsᴜx] %(message)s"
 
 if __name__ == "__main__":
     logging.basicConfig(
@@ -29,6 +35,6 @@ if __name__ == "__main__":
         logging.INFO
     )
     for module in ALL_MODULES:
-        importlib.import_module("chatbot.modules." + module)
+        importlib.import_module("AsuX.modules." + module)
     main()
-    print("ɪ ᴀᴍ ɴᴏᴡ ᴏɴʟɪɴᴇ")
+    print("ᴏ ғᴜ*ᴋ  ᴡʜᴇɴ ᴛᴜʀɴ ᴏɴ ᴍᴇ ᴀɢᴀɪɴ 🤔")
