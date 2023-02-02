@@ -11,7 +11,7 @@ import time
 from telegram import Update
 from telegram.ext import Application
 
-from chatbot.modules import ALL_MODULES
+from AsuX.modules import ALL_MODULES
 from config import MONGO_DB_URL, TOKEN
 
 TOKEN = TOKEN
