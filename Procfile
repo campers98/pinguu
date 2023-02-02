@@ -1,1 +1,1 @@
-worker: bash AsuX
+worker: bash start
