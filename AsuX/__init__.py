@@ -26,7 +26,6 @@ rani = Application.builder().token(TOKEN).build()
 asyncio.get_event_loop().run_until_complete(rani.bot.initialize())
 
 
-
 BOT_ID = rani.bot.id
 BOT_USERNAME = rani.bot.username
 
