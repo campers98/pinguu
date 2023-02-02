@@ -5,17 +5,15 @@
 
 import datetime
 import platform
-import re
 from platform import python_version
-import wikipedia
+
 from psutil import boot_time, cpu_percent, disk_usage, virtual_memory
-from requests import get
-from spamwatch import __version__ as __sw__
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, __version__
-from telegram.constants import ChatType, ParseMode
-from telegram.error import BadRequest
-from telegram.ext import CommandHandler, ContextTypes, filters
+from telegram import __version__
+from telegram.constants import ParseMode
+from telegram.ext import CommandHandler
+
 from AsuX import rani
+
 
 async def system_status(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
@@ -42,8 +40,5 @@ async def system_status(update, context):
     )
 
 
-
-SYS_STATUS_HANDLER = CommandHandler(
-    ["stats", "sysinfo"], system_status, block=False)
+SYS_STATUS_HANDLER = CommandHandler(["stats", "sysinfo"], system_status, block=False)
 rani.add_handler(SYS_STATUS_HANDLER)
-
