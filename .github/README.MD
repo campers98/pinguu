@@ -32,7 +32,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴇxᴏɴ ✘ ʀᴏ
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Abishnoi69/Chatbot"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Abishnoi69/AsuX"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 <h3 align="center">
@@ -43,7 +43,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴇxᴏɴ ✘ ʀᴏ
 $ sudo apt install tmux && tmux
 $ apt update
 $ apt-get -y install git gcc python3-dev
-$ git clone https://github.com/Abishnoi69/Chatbot && cd Chatbot
+$ git clone https://github.com/Abishnoi69/AsuX && cd AsuX
 $ pip3 install -U -r requirements.txt 
 $ vi config.py
  Press I on the keyboard for editing config
