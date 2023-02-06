@@ -78,7 +78,7 @@ $ bash start
 
 ➥ [𝐀𝖻𝗂𝗌𝗁𝗇𝗈𝗂] × <a href="https://github.com/Abishnoi69" alt="Abishnoi69"> <img src="https://img.shields.io/badge/KINGABISHNOI-90302f?logo=github" /></a>  
 
-➥ [𝐙ᴀɪᴅ] × <a href="https://github.com/ITZ-ZAID/AI" alt="ITZ-ZAID"> <img src="https://img.shields.io/badge/ItsZaid-90302f?logo=github" /></a>  
+➥ [𝐏ᴛʙ] × <a href="https://docs.python-telegram-bot.org/en/stable/index.html" alt="python-telegram-bot"> <img src="https://img.shields.io/badge/pythontelegrambot-90302f?logo=github" /></a>  
 
 
 ━━━━━━━━━━━━━━━━━━━━
