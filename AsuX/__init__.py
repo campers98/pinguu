@@ -8,6 +8,8 @@
 import asyncio
 import time
 
+import importlib
+import logging
 from telegram import Update
 from telegram.ext import Application
 
@@ -21,6 +23,28 @@ AI_API_KEY = "RBPOWF2m8z85prBQ"
 AI_BID = "171092"
 
 StartTime = time.time()
+
+
+
+
+FORMAT = "[ᴀsᴜx] %(message)s"
+
+    logging.basicConfig(
+        handlers=[logging.FileHandler("logs.txt"), logging.StreamHandler()],
+        level=logging.INFO,
+        format=FORMAT,
+        datefmt="[%X]",
+    )
+    logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(
+        logging.INFO
+    )
+
+logger = logging.getLogger(__name__)
+
+
+
+
+
 
 rani = Application.builder().token(TOKEN).build()
 asyncio.get_event_loop().run_until_complete(rani.bot.initialize())
