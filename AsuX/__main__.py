@@ -5,7 +5,6 @@
 
 
 import importlib
-import logging
 
 from telegram import Update
 
@@ -20,8 +19,6 @@ def main():
         allowed_updates=Update.ALL_TYPES,
         stop_signals=None,
     )
-
-
 
 
 if __name__ == "__main__":
