@@ -2,9 +2,8 @@
 ɢɪᴛʜᴜʙ -Abishnoi69
 ᴛᴇʟᴇɢʀᴀᴍ @Abishnoi1M / @Abishnoi_bots 
 """
+from config import LOAD, NO_LOAD
 
-LOAD = []
-NO_LOAD = []
 
 
 def get_readable_time(seconds: int) -> str:
