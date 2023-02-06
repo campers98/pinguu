@@ -22,19 +22,10 @@ def main():
     )
 
 
-FORMAT = "[ᴀsᴜx] %(message)s"
+
 
 if __name__ == "__main__":
-    logging.basicConfig(
-        handlers=[logging.FileHandler("logs.txt"), logging.StreamHandler()],
-        level=logging.INFO,
-        format=FORMAT,
-        datefmt="[%X]",
-    )
-    logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(
-        logging.INFO
-    )
-    for module in ALL_MODULES:
-        importlib.import_module("AsuX.modules." + module)
+    for Abishnoi in ALL_MODULES:
+        importlib.import_module("AsuX.modules." + Abishnoi)
     main()
     print("ᴏ ғᴜ*ᴋ  ᴡʜᴇɴ ᴛᴜʀɴ ᴏɴ ᴍᴇ ᴀɢᴀɪɴ 🤔")
