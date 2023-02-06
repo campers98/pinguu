@@ -27,19 +27,15 @@ StartTime = time.time()
 
 
 
-FORMAT = "[ᴀsᴜx] %(message)s"
 
-    logging.basicConfig(
-        handlers=[logging.FileHandler("logs.txt"), logging.StreamHandler()],
-        level=logging.INFO,
-        format=FORMAT,
-        datefmt="[%X]",
-    )
-    logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(
-        logging.INFO
-    )
+# Enable logging
+
+logging.basicConfig(
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
+)
 
 logger = logging.getLogger(__name__)
+
 
 
 
