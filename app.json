@@ -17,6 +17,11 @@
         "required": false,
         "value": ""
      },
+    "NO_LOAD": {
+      "description": "ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɴᴏ ʟᴏᴀᴅ ᴀɴʏ ᴍᴏᴅᴜʟᴇ's ",
+      "required": false,      
+      "value": ""
+    },    
     "TOKEN": {
       "description": "ʙᴏᴛ ᴛᴏᴋᴇɴ ғʀᴏᴍ @botfather..",
       "value": "BOT_TOKEN"
