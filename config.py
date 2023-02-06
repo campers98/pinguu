@@ -1,6 +1,5 @@
 from os import getenv
 
-
 LOAD = getenv("LOAD", "").split()
 
 NO_LOAD = getenv("NO_LOAD", "").split()

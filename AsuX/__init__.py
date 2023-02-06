@@ -6,10 +6,10 @@
 """
 
 import asyncio
-import time
-
 import importlib
 import logging
+import time
+
 from telegram import Update
 from telegram.ext import Application
 
@@ -25,9 +25,6 @@ AI_BID = "171092"
 StartTime = time.time()
 
 
-
-
-
 # Enable logging
 
 logging.basicConfig(
@@ -35,11 +32,6 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-
-
-
-
-
 
 
 rani = Application.builder().token(TOKEN).build()
