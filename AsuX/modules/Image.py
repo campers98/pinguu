@@ -212,6 +212,9 @@ rani.add_handler(
     )
 )
 rani.add_handler(
-    MessageHandler(filters.PHOTO, generate_and_send_photo_from_photo,)
+    MessageHandler(
+        filters.PHOTO,
+        generate_and_send_photo_from_photo,
+    )
 )
 rani.add_handler(CallbackQueryHandler(button))
