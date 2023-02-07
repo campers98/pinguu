@@ -208,7 +208,7 @@ rani.add_handler(
     MessageHandler(
         filters.TEXT & ~filters.COMMAND,
         generate_and_send_photo,
-        filters=filters.ChatType.PRIVATE,
+        filters.ChatType.PRIVATE,
         block=False,
     )
 )
