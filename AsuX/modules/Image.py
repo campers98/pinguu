@@ -209,10 +209,9 @@ rani.add_handler(
         filters.TEXT & ~filters.COMMAND,
         generate_and_send_photo,
         filters.ChatType.PRIVATE,
-        block=False,
     )
 )
 rani.add_handler(
-    MessageHandler(filters.PHOTO, generate_and_send_photo_from_photo, block=False)
+    MessageHandler(filters.PHOTO, generate_and_send_photo_from_photo,)
 )
 rani.add_handler(CallbackQueryHandler(button))
