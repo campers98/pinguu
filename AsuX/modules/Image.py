@@ -121,7 +121,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         im, seed = generate_image(prompt, photo=photo)
     await context.bot.delete_message(chat_id=progress_msg.chat_id, message_id=progress_msg.message_id)
     await context.bot.send_photo(update.effective_user.id, image_to_bytes(im), caption=f'"{prompt}" (Seed: {seed})', reply_markup=get_try_again_markup(), reply_to_message_id=replied_message.message_id)
-, 
+ 
 
 
 rani.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, generate_and_send_photo, filters=filters.ChatType.PRIVATE, block=False))
