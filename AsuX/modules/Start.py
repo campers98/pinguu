@@ -26,7 +26,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=InlineKeyboardMarkup(akboss),
     )
 
-   
 
 async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
@@ -45,9 +44,6 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=InlineKeyboardMarkup(akboss),
     )
 
-    
-    
-    
 
 START = CommandHandler(["chatbot", "start"], start, block=False)
 HELP = CommandHandler(["chelp", "help"], help, block=False)
