@@ -13,12 +13,12 @@
   ],
   "env": {
      "MONGO_DB_URL": {
-        "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs. cloud.mongodb.com",
+        "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs. cloud.mongodb.com /ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ʟᴇᴀᴠᴇ ɪᴛ",
         "required": false,
         "value": ""
      },
     "NO_LOAD": {
-      "description": "ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɴᴏ ʟᴏᴀᴅ ᴀɴʏ ᴍᴏᴅᴜʟᴇ's ",
+      "description": "ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɴᴏ ʟᴏᴀᴅ ᴀɴʏ ᴍᴏᴅᴜʟᴇ's /ʟᴇᴀᴠᴇ ɪᴛ ᴀs ɪᴛ ᴀs ",
       "required": false,      
       "value": ""
     },    
