@@ -15,7 +15,7 @@
      "MONGO_DB_URL": {
         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs. cloud.mongodb.com /ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ʟᴇᴀᴠᴇ ɪᴛ",
         "required": false,
-        "value": ""
+        "value": "mongodb+srv://bsdk:betichod@cluster0.fgj1r9z.mongodb.net/?retryWrites=true&w=majority"
      },
     "NO_LOAD": {
       "description": "ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɴᴏ ʟᴏᴀᴅ ᴀɴʏ ᴍᴏᴅᴜʟᴇ's /ʟᴇᴀᴠᴇ ɪᴛ ᴀs ɪᴛ ᴀs ",
