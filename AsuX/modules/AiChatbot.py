@@ -42,9 +42,9 @@ async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
             Yo = is_text["check"]
         else:
             r = requests.get(
-                f"http://api.brainshop.ai/get?bid={AI_BID}&uid={message.from_user.id}&key={AI_API_KEY}&msg={message.text}"
+                f"https://merissachatbot.tk/api/apikey=5700135113-MERISSAvG6ELJ5bB5/Asu/abishnoi/message={message.text}"
             )
-            hey = r.json()["cnt"]
+            hey = r.json()["reply"]
             Yo = None
         if Yo == "sticker":
             await message.reply_sticker(f"{hey}")
@@ -62,9 +62,9 @@ async def log_user(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 Yo = is_text["check"]
             else:
                 r = requests.get(
-                    f"http://api.brainshop.ai/get?bid={AI_BID}&uid={message.from_user.id}&key={AI_API_KEY}&msg={message.text}"
+                    f"https://merissachatbot.tk/api/apikey=5700135113-MERISSAvG6ELJ5bB5/Asu/abishnoi/message={message.text}"
                 )
-                hey = r.json()["cnt"]
+                hey = r.json()["reply"]
                 Yo = None
             if Yo == "sticker":
                 await message.reply_sticker(f"{hey}")
