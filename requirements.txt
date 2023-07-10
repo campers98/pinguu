@@ -1,6 +1,5 @@
+Abg==2.3.1
 requests
 motor
 pymongo[src]
-dnspython
-python-telegram-bot
-psutil
+pyrogram
