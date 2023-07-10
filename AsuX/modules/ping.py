@@ -4,12 +4,12 @@ from Abg.helpers.human_read import get_readable_time
 from pyrogram import Client
 from pyrogram.types import Message
 
-from AsuX import Abishnoi, uptime
+from AsuX import Abishnoi, StartTime
 
 
 @Abishnoi.on_cmd(["ping", "pong", "alive"])
 async def ping(self: Client, ctx: Message):
-    currentTime = get_readable_time(time.time() - uptime)
+    currentTime = get_readable_time(time.time() - StartTime)
     start_t = time.time()
     rm = await ctx.reply_msg("💫 ᴘᴏɴɢ !!...")
     end_t = time.time()
