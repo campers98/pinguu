@@ -1,4 +1,4 @@
-from sys import exit 
+from sys import exit
 
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
@@ -13,7 +13,7 @@ try:
 except PyMongoError as f:
     LOGGER.error(f"Error in Mongodb: {f}")
     exit(1)
-    
+
 db = _client[DB_NAME]
 
 
