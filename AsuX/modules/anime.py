@@ -2,12 +2,11 @@ import json
 from calendar import month_name
 
 import aiohttp
+from Abg.helpers.human_read import get_readable_time
 from Abg.helpers.ratelimit import ratelimiter
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from AsuX import Abishnoi
-from Abg.helpers.human_read import get_readable_time
-
 
 anime_query = """
 query ($id: Int, $idMal: Int, $search: String) {
