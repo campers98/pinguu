@@ -1,4 +1,3 @@
-from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from AsuX import Abishnoi
@@ -52,6 +51,7 @@ async def style_buttons(c, m, cb=False):
     else:
         await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
+
 
 @Abishnoi.on_cb("nxt")
 async def nxt(c, m):

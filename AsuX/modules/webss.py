@@ -1,12 +1,11 @@
 import os
 from asyncio import gather
 
-from pyrogram import Client, filters
+from pyrogram import Client
 from pyrogram.types import Message
 from pySmartDL import SmartDL
 
 from AsuX import Abishnoi
-
 
 
 @Abishnoi.on_cmd("webss")
@@ -27,7 +26,9 @@ async def take_ss(self: Client, ctx: Message):
         await gather(
             *[
                 ctx.reply_document(download_file_path),
-                ctx.reply_photo(download_file_path, caption="sᴄʀᴇᴇɴsʜᴏᴛ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴜsɪɴɢ ᴘᴜᴘᴘᴇᴛᴇᴇʀ"),
+                ctx.reply_photo(
+                    download_file_path, caption="sᴄʀᴇᴇɴsʜᴏᴛ ɢᴇɴᴇʀᴀᴛᴇᴅ ᴜsɪɴɢ ᴘᴜᴘᴘᴇᴛᴇᴇʀ"
+                ),
             ]
         )
         await msg.delete_msg()
