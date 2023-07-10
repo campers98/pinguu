@@ -1,12 +1,15 @@
 from os import getenv
 
-LOAD = getenv("LOAD", "").split()
+from dotenv import load_dotenv
 
-NO_LOAD = getenv("NO_LOAD", "").split()
+load_dotenv()
 
-TOKEN = getenv("TOKEN", None)
 
-MONGO_DB_URL = getenv(
-    "MONGO_DB_URL",
-    "mongodb+srv://bsdk:betichod@cluster0.fgj1r9z.mongodb.net/?retryWrites=true&w=majority",
-)
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
+
+TOKEN = getenv("TOKEN")
+MONGO_DB_URL = getenv("MONGO_DB_URL", None)
+
+OWNER_ID = int(getenv("OWNER_ID", 5938660179))
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/FallenAssociation")
