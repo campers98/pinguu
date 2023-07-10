@@ -1,7 +1,7 @@
 import time
 from asyncio import sleep
 
-from pyrogram import enums, filters
+from pyrogram import enums
 from pyrogram.types import Message
 
 from AsuX import Abishnoi
