@@ -5,7 +5,8 @@ from . import MongoDB
 INSERTION_LOCK = RLock()
 
 
-#thanks @gojo_bots_network
+# thanks @gojo_bots_network
+
 
 class GIVEAWAY(MongoDB):
     """Class to store giveaway info of the chat"""
