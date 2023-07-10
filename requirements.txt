@@ -1,5 +1,5 @@
 Abg==2.3.1
+aiohttp
 requests
-motor
 pymongo[src]
 pyrogram
