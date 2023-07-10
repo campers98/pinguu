@@ -6,17 +6,16 @@
 
 
 <h2 align="center">
-    ──「 ʀᴀɴɪ ᴄʜᴀᴛʙᴏᴛ 」──
+    ──「 ᴀsᴜx 」──
 </h2>
 
 
 ##  ᴄᴀᴛᴄʜ ᴍᴇ ɪɴ [ᴛɢ🏃‍♀️](https://t.me/AbishnoiMF) 
 
-## [ғᴏʀ ᴜᴘᴅᴀᴛᴇ](https://t.me/Abishnoi_bots)  
 
 ## ⚡ (ɢɪᴠᴇ sᴛᴀʀ)
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴇxᴏɴ ✘ ʀᴏʙᴏᴛ](https://t.me/Exon_Robot)**_
+
 ━━━━━━━━━━━━━━━━━━━━
 ━━━━━━━━━━━━━━━━━━━━
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -71,14 +70,4 @@ $ bash start
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 ━━━━━━━━━━━━━━━━━━━━
-<h3 align="center">
-    ─「 ᴄʀᴇᴅɪᴛs 」─
-</h3>
- : ➻
 
-➥ [𝐀𝖻𝗂𝗌𝗁𝗇𝗈𝗂] × <a href="https://github.com/Abishnoi69" alt="Abishnoi69"> <img src="https://img.shields.io/badge/KINGABISHNOI-90302f?logo=github" /></a>  
-
-➥ [𝐏ᴛʙ] × <a href="https://docs.python-telegram-bot.org/en/stable/index.html" alt="python-telegram-bot"> <img src="https://img.shields.io/badge/pythontelegrambot-90302f?logo=github" /></a>  
-
-
-━━━━━━━━━━━━━━━━━━━━
