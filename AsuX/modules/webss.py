@@ -12,7 +12,7 @@ from AsuX import Abishnoi
 @Abishnoi.on_cmd("webss")
 async def take_ss(self: Client, ctx: Message):
     if len(ctx.command) == 1:
-        return await ctx.reply_msg"ɢɪᴠᴇ ᴀ ᴜʀʟ ᴛᴏ ғᴇᴛᴄʜ sᴄʀᴇᴇɴsʜᴏᴛ.", del_in=6)
+        return await ctx.reply_msg("ɢɪᴠᴇ ᴀ ᴜʀʟ ᴛᴏ ғᴇᴛᴄʜ sᴄʀᴇᴇɴsʜᴏᴛ.", del_in=6)
     url = (
         ctx.command[1]
         if ctx.command[1].startswith("http")
