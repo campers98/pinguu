@@ -91,7 +91,7 @@ async def start_give_one(c: Abishnoi, m: Message):
                     try:
                         c_id = int(channel_id.text)
                         try:
-                            bot_stat = (await c.get_chat_member(c_id,.Abishnoi.id)).status
+                            bot_stat = (await c.get_chat_member(c_id, Abishnoi.id)).status
                             if bot_stat in [CMS.ADMINISTRATOR,CMS.OWNER]:
                                 break
                             else:
