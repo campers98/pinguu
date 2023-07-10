@@ -4,7 +4,7 @@ from Abg.helpers.human_read import get_readable_time
 from pyrogram import Client
 from pyrogram.types import Message
 
-from AsuX import uptime, Abishnoi
+from AsuX import Abishnoi, uptime
 
 
 @Abishnoi.on_cmd(["ping", "pong", "alive"])
