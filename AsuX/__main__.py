@@ -4,25 +4,29 @@
 """
 
 
+import asyncio
 import importlib
 
-from telegram import Update
+from pyrogram import idle
 
-from AsuX import rani
+from AsuX import LOGGER, Abishnoi
 from AsuX.modules import ALL_MODULES
 
 
-def main():
-    rani.run_polling(
-        timeout=15,
-        drop_pending_updates=True,
-        allowed_updates=Update.ALL_TYPES,
-        stop_signals=None,
-    )
+async def start_bot():
+    try:
+        await Abishnoi.start()
+    except Exception as e:
+        LOGGER.error(e)
+        quit(1)
+
+    for all_module in ALL_MODULES:
+        importlib.import_module("AsuX.modules." + all_module)
+
+    LOGGER.info(f"@{Abishnoi.username} Started.")
+    await idle()
 
 
 if __name__ == "__main__":
-    for Abishnoi in ALL_MODULES:
-        importlib.import_module("AsuX.modules." + Abishnoi)
-    main()
-    print("ᴏ ғᴜ*ᴋ  ᴡʜᴇɴ ᴛᴜʀɴ ᴏɴ ᴍᴇ ᴀɢᴀɪɴ 🤔")
+    asyncio.get_event_loop().run_until_complete(start_bot())
+    LOGGER.info("Stopping AsuX Bot...")
