@@ -1,8 +1,8 @@
 from pyrogram.enums import ChatType
 from pyrogram.types import CallbackQuery, InlineQuery, Message
-from strings import get_string
 
 from AsuX.db.lang_db import Langs
+from strings import get_string
 
 
 def lang(mystic):

@@ -3,11 +3,11 @@ from asyncio import sleep
 from Abg.inline import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, Message
-from strings import get_string, languages_present
 
 from AsuX import Abishnoi
 from AsuX.db.lang_db import Langs
 from AsuX.modules.utils.langs import lang
+from strings import get_string, languages_present
 
 
 def lanuages_keyboard(_):
