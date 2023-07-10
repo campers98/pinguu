@@ -6,3 +6,7 @@ setting_1 : "<b>ʙᴏᴛ sᴇᴛᴛɪɴɢs</b>\n<b>ɢʀᴏᴜᴘ:</b> {0}\n<b>ɢ
 # Button's
 CLOSE_BUTTON  : "🗑"
 BACK_BUTTON : "🔙"
+
+#Ping
+ping_1 : "💫 ᴘᴏɴɢ !!..."
+ping_2 : "<b>ᴘɪɴɢ:</b> <code>{time_taken_s}ᴍs</code>\n<b>ᴜᴘᴛɪᴍᴇ:</b> <code>{currentTime}</code>"
