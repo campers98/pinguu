@@ -9,18 +9,11 @@ import asyncio
 import importlib
 import logging
 import time
+import config
 
-from telegram import Update
-from telegram.ext import Application
-
-from AsuX.modules import ALL_MODULES
-from config import MONGO_DB_URL, TOKEN
-
-TOKEN = TOKEN
-MONGO_DB_URL = MONGO_DB_URL
-
-AI_API_KEY = "RBPOWF2m8z85prBQ"
-AI_BID = "171092"
+from Abg import patch  # type : ignore
+from pyrogram import Client
+from pyrogram.enums import ParseMode
 
 StartTime = time.time()
 
@@ -28,19 +21,36 @@ StartTime = time.time()
 # Enable logging
 
 logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
+    format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
+    handlers=[logging.FileHandler("Guardlogs.txt"), logging.StreamHandler()],
+    level=logging.INFO,
 )
+logging.getLogger("pyrogram").setLevel(logging.ERROR)
+LOGGER = logging.getLogger(__name__)
 
-logger = logging.getLogger(__name__)
+class Abishnoi(Client):
+    def __init__(self):
+        super().__init__(
+            name="AsuX",
+            api_id=config.API_ID,
+            api_hash=config.API_HASH,
+            lang_code="en",
+            sleep_threshold=60,
+            bot_token=config.TOKEN,
+            in_memory=True,
+            parse_mode=ParseMode.DEFAULT,
+        )
+
+    async def start(self):
+        await super().start()
+        self.id = self.me.id
+        self.name = self.me.first_name + " " + (self.me.last_name or "")
+        self.username = self.me.username
+        self.mention = self.me.mention
+
+    async def stop(self):
+        await super().stop()
 
 
-rani = Application.builder().token(TOKEN).build()
-asyncio.get_event_loop().run_until_complete(rani.bot.initialize())
-
-
-BOT_ID = rani.bot.id
-BOT_USERNAME = rani.bot.username
-
-print("ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ")
-print("sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs -: " + str(ALL_MODULES))
-print(f"ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ ᴀs -: {BOT_USERNAME} ")
+Abishnoi = Abishnoi()
