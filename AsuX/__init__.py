@@ -1,10 +1,3 @@
-"""
-ᴀɴ ᴀʀᴛɪғɪᴄɪᴀʟ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ ғᴏʀ ᴘᴜʙʟɪᴄ ᴜsᴇs ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛs. ʙᴀsᴇᴅ ᴏɴ ᴘᴛʙ
-ɢɪᴛʜᴜʙ -Abishnoi69
-ᴛᴇʟᴇɢʀᴀᴍ @Abishnoi1M / @Abishnoi_bots 
-
-"""
-
 import asyncio
 import importlib
 import logging
