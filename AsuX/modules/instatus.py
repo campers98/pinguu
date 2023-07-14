@@ -10,8 +10,6 @@ from AsuX import Abishnoi
 @Abishnoi.on_cmd("instatus", group_only=True, self_admin=True)
 @Abishnoi.adminsOnly(permissions="can_change_info", is_both=True)
 async def instatus(c: Abishnoi, m: Message):
-    if m.sender_chat:
-        return await m.reply_msg("ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ ғᴏʀ ᴄʜᴀɴɴᴇʟ.", del_in=4)
     start_time = time.perf_counter()
     user = await c.get_chat_member(m.chat.id, m.from_user.id)
     count = await c.get_chat_members_count(m.chat.id)
