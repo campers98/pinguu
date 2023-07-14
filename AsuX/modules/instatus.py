@@ -8,6 +8,7 @@ from AsuX import Abishnoi
 
 
 @Abishnoi.on_cmd("instatus", group_only=True, self_admin=True)
+@Abishnoi.adminsOnly(permissions="can_change_info", is_both=True)
 async def instatus(c: Abishnoi, m: Message):
     if m.sender_chat:
         return await m.reply_msg("ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ ғᴏʀ ᴄʜᴀɴɴᴇʟ.", del_in=4)
