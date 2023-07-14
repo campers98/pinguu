@@ -1,15 +1,16 @@
 import time
 
 from Abg.helpers.human_read import get_readable_time
-#from Abg.helpers.ratelimit import ratelimiter
+
+# from Abg.helpers.ratelimit import ratelimiter
 from pyrogram import Client
 from pyrogram.types import Message
 
-from AsuX import StartTime, Abishnoi
+from AsuX import Abishnoi, StartTime
 
 
 @Abishnoi.on_cmd(["ping", "pong", "alive"])
-#@ratelimiter
+# @ratelimiter
 async def ping(self: Client, ctx: Message):
     currentTime = get_readable_time(time.time() - StartTime)
     start_t = time.time()
