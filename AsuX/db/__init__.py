@@ -14,7 +14,7 @@ try:
 except PyMongoError as f:
     LOGGER.error(f"Error in Mongodb: {f}")
     exit(1)
-    
+
 # Pymongo Database
 db = _client[DB_NAME]
 
