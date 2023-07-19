@@ -20,7 +20,7 @@ db = _client[DB_NAME]
 
 # motor Database
 mongo = MongoCli(MONGO_DB_URL)
-db = mongo.AsuX_
+mdb = mongo.AsuX_
 
 
 class MongoDB:
