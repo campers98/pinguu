@@ -1,5 +1,6 @@
 from sys import exit
 
+from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
 
@@ -13,8 +14,13 @@ try:
 except PyMongoError as f:
     LOGGER.error(f"Error in Mongodb: {f}")
     exit(1)
-
+    
+# Pymongo Database
 db = _client[DB_NAME]
+
+# motor Database
+mongo = MongoCli(MONGO_DB_URL)
+db = mongo.AsuX_
 
 
 class MongoDB:
