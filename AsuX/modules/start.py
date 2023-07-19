@@ -13,8 +13,8 @@ from pyrogram.types import (
 
 from AsuX import Abishnoi
 from AsuX import StartTime as boot
-from AsuX.db.chats import add_served_chat
-from AsuX.db.users import add_served_user
+from AsuX.db.chats_db import add_served_chat
+from AsuX.db.users_db import add_served_user
 
 from . import PICS
 
@@ -87,10 +87,24 @@ async def help_(cli: Abishnoi, query: CallbackQuery):
         ),
         parse_mode=ParseMode.HTML,
     )
+    
+@Abishnoi.on_cb("source_")
+async def source_(cli: Abishnoi, query: CallbackQuery):
+    await query.answer()
+    await query.message.edit_text(
+        text=f"""
+<u><b>➻ ʜᴇʀᴇ ɪs ᴛʜᴇ sᴏᴜʀᴄᴇ ᴏғ {Abishnoi.mention} :</b></u>
 
+• ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ : [ᴘʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram), [ᴀʙɢ](https://github.com/Abishnoi69/Abg) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com/) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
+• ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : [{Abishnoi.name}](https://github.com/Abishnoi69/AsuX)
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="AsuX_home")]]
+        ),   
+    )
 
-@Abishnoi.on_callback_query(filters.regex("AsuX_home"))
-async def hamkhome(cli: Abishnoi, query: CallbackQuery):
+@Abishnoi.on_cb("AsuX_home")
+async def AsuX_home(cli: Abishnoi, query: CallbackQuery):
     await query.answer()
     bot_uptime = int(time.time() - boot)
     uptime = get_readable_time(bot_uptime)
